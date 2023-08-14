@@ -10,16 +10,28 @@ blog_app = Flask(__name__)
 
 @blog_app.route("/", strict_slashes=False)
 def hello_hbnb():
+    """
+    Responds with a message 'Hello HBNB!' to HTTP requests
+    to the root URL ("/").
+    """
     return "Hello HBNB!"
 
 
 @blog_app.route("/hbnb", strict_slashes=False)
 def hbnb():
+    """
+    Responds with a message 'HBNB' to HTTP requests to the '/hbnb' URL.
+    """
     return "HBNB"
 
 
 @blog_app.route("/c/<text>", strict_slashes=False)
 def c_text(text="is cool"):
+    """
+    Responds with a modified text 'C <modified_text>' to requests
+    to the '/c/<text>' route.
+    """
+
     underscore_by_a_space = text.replace('_', ' ')
     return "C " + underscore_by_a_space
 
@@ -27,6 +39,10 @@ def c_text(text="is cool"):
 @blog_app.route("python/", strict_slashes=False)
 @blog_app.route("python/<text>", strict_slashes=False)
 def python_text(text="is cool"):
+    """
+    Responds with a text 'Python <modified_text>'
+    based on the provided text parameter.
+    """
     underscore_by_a_space = text.replace("_", " ")
     return "Python " + underscore_by_a_space
 

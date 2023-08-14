@@ -21,7 +21,7 @@ def hbnb():
 @blog_app.route("/c/<text>", strict_slashes=False)
 def c_text(text):
     underscore_by_a_space = text.replace('_', ' ')
-    return "C" + underscore_by_a_space
+    return "C " + underscore_by_a_space
 
 
 if __name__ == "__main__":

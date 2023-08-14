@@ -36,8 +36,8 @@ def c_text(text="is cool"):
     return "C " + underscore_by_a_space
 
 
-@blog_app.route("python/", strict_slashes=False)
-@blog_app.route("python/<text>", strict_slashes=False)
+@blog_app.route("/python/", strict_slashes=False)
+@blog_app.route("/python/<text>", strict_slashes=False)
 def python_text(text="is cool"):
     """
     Responds with a text 'Python <modified_text>'

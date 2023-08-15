@@ -70,7 +70,7 @@ def states_list():
 
 @blog_app.route("/cities_by_states", strict_slashes=False)
 def cities_by_states():
-    return render_template("/8-cities_by_states.html", states=storage.all(State))
+    return render_template("/8-cities_by_states.html", sts=storage.all(State))
 
 
 @blog_app.teardown_appcontext

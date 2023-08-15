@@ -11,7 +11,7 @@
                 <LI>{{ state.id }}: <B>{{ state.name }}</B></LI>
             {% endfor %}
         </UL>
-    {% endif %}
+    {% else %}
 
     {% if state_c_id %}
         <H1>State: {{ state_c_id.name }}</H1>
@@ -23,6 +23,8 @@
         </UL>
     {% else %}
         <H1>Not found!</H1>
+    {% endif %}
+    
     {% endif %}
 </BODY>
 </HTML>

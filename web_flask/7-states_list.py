@@ -67,9 +67,11 @@ def number_odd_or_even(n):
 def states_list():
     return render_template("7-states_list.html", states=storage.all(State))
 
+
 @blog_app.teardown_appcontext
 def teardown(e):
     storage.close()
+
 
 if __name__ == "__main__":
     blog_app.run(host="0.0.0.0", port=5000)

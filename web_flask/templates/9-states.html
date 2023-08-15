@@ -4,7 +4,9 @@
     <TITLE>HBNB</TITLE>
 </HEAD>
 <BODY>
-    {% if sts %}
+    {% if not sts %}
+        <H1>States</H1>
+    {% else %}
         <H1>States</H1>
         <UL>
             {% for state in sts.values()|sort(attribute='name') %}

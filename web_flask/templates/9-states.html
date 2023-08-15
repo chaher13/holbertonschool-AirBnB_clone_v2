@@ -14,10 +14,10 @@
     {% endif %}
 
     {% if state_c_id %}
-        <H1>State: {{ state.name }}</H1>
+        <H1>State: {{ state_c_id.name }}</H1>
         <H3>Cities:</H3>
         <UL>
-            {% for city in state.cities %}
+            {% for city in state_c_id.cities %}
                 <LI>{{ city.id }}: <B>{{ city.name }}</B></LI>
             {% endfor %}
         </UL>

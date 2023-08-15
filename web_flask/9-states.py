@@ -74,8 +74,8 @@ def cities_by_states():
 
 
 @blog_app.route("/states", strict_slashes=False)
-def states_list():
-    return render_template('/9-states.html', states=storage.all(State).values())
+def states():
+    return render_template('/9-states.html', states=storage.all(State))
 
 
 @blog_app.route("/states/<id>", strict_slashes=False)
